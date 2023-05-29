@@ -1,0 +1,192 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+/*font-family: 'Roboto', sans-serif;*/
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+body{
+    background-color: hsl(235, 18%, 26%);
+}
+
+section{
+    height: 630px;
+    width: 900px;
+    padding: 20px;
+    
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    display: flex;
+    box-sizing: border-box;
+    justify-content: space-between;
+
+    background-color: white;
+    border-radius: 30px;
+}
+
+
+    main{
+        padding: 10px;
+        margin: 20px;
+
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+        h1{
+            margin-top: 20px;
+
+            font-size: 50px;
+            font-weight: bold;
+        }
+        #text1{
+            margin-bottom: 15px;
+        }
+        p{
+            display: flex;
+            gap: 10px;
+        }
+
+        .div_email{
+            margin-top: 30px;
+        }
+        .div_email label{
+            margin-right: 160px;
+
+            font-size: 13px;
+            font-weight: bold;
+        }
+        #invalid{
+            opacity: 0; /*if i use display:block it breaks the line*/
+
+            color: red;
+            font-size: 13px;
+        }
+        .div_email input{
+            width: 360px;
+            height: 45px;
+
+            margin-bottom: 40px;
+            margin-top: 10px;
+
+            border-radius: 7px;
+            text-indent: 13px;
+        }
+            ::placeholder{
+                color: rgba(0, 0, 0, 0.358);
+                text-indent: 13px;
+            }
+        #confirm-sub{
+            margin-top: -10px;
+
+            background-color: hsl(235, 18%, 26%);
+            color: white;
+            border: none;
+            letter-spacing: 1px;
+        }
+        #confirm-sub:hover{
+            background-image: linear-gradient(to right, rgb(255, 83, 119), rgb(255, 104, 65));
+        }
+
+
+            /* after confirmation */
+        .confirmation_screen{
+            height: 530px;
+            width: 500px;
+            padding: 70px;
+
+            display: none;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+
+            background-color: white;
+            border-radius: 30px;
+            
+        }
+        .confirmation_screen h1{
+            margin-bottom: 25px;
+        }
+
+        #email_span{
+            font-weight: bold;
+            font-size: 17px;
+        }
+        .confirmation_screen input{
+            width: 350px;
+            height: 50px;
+
+            margin-top: 40px;
+            
+            border-radius: 7px;
+            background-color: hsl(235, 18%, 26%);
+            color: white;
+        }
+        .confirmation_screen input:hover{
+            background-image: linear-gradient(to right, rgb(255, 83, 119), rgb(255, 104, 65));
+        }
+        @media screen and (max-width:950px) {
+            section{
+                width: 400px;
+                height: 830px;
+                padding: 0;
+
+                flex-direction: column;
+            }
+            h1{
+                font-size: 45px;
+            }
+            aside{
+                order: -1;
+            }
+            aside img{
+                width: 400px;
+            }
+            main{
+                margin-top: 0;
+                padding: 0px;
+            }
+            .div_email{
+                margin-top: 10px;
+            }
+            .div_email input{
+                width: 350px;
+                height: 55px;
+                
+                margin-bottom: 35px;
+            }
+
+        }
+
+        @media screen and (max-width:400px){
+            section{
+                width: 100%;
+                height: 97%;
+                padding-bottom: 10px;
+            }
+            aside picture img{
+                width: 100%;
+            }
+            #confirm-sub, #email-inp{
+                width: 97%;
+            }
+        }
+
+        @media screen and (max-width:500px){
+            .confirmation_screen{
+                width: 100%;
+                height: 100%;
+                padding-top: 200px;
+            }
+            .confirmation_screen input{
+                width: 97%;
+                height: 60px;
+                margin-top: 250px;
+            }
+        }

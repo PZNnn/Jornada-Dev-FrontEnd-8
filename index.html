@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <section id="subscription_main_screen">
+        <main>
+            <h1>Stay updated!</h1>
+            <p id="text1">Join 60.000+ product managers receiving monthly<br>
+            updates on:</p>
+
+            <p><img src="imagens/icon-list.svg" alt="">Product discovery and building what matters</p>
+            <p><img src="imagens/icon-list.svg" alt="">Measuring to ensure updates are a success</p>
+            <p><img src="imagens/icon-list.svg" alt="">And much more!</p>
+            
+            <div class="div_email"> 
+                <label for="email">Email address</label> <span id="invalid">Valid email required</span>
+                <br>
+                <input type="email" id="email-inp" name="email" placeholder="email@company.com" autocomplete="off">
+                <br>
+                <input type="button" id="confirm-sub" value="Subcribe to monthly newsletter" onclick="email_validation()">
+            </div> 
+        </main>
+
+        <aside>
+            <picture class="imgage" alt="imgage">
+                <source media="(max-width: 950px)" srcset="https://cdn.discordapp.com/attachments/699719411313147937/1112119820348047440/illustration-sign-up-mobile.png">
+                <img src="imagens/illustration-sign-up-desktop.svg" alt="">
+            </picture>
+        </aside>
+    </section>
+
+    <div class="confirmation_screen" id="confirmation_screen">
+        <img src="imagens/icon-success.svg" alt="">
+        <h1>Thanks for subscribing!</h1>
+        <p>A confimation email has ben sent to<br></p>
+        <span id="email_span">zinhogiatti@hotmail.com</span>
+        <p>Please open it and click the button inside to confirm your subscription</p>
+        <input type="button" value="Dismiss message">
+    </div>
+</body>
+<script src="index.js"></script>
+</html>
